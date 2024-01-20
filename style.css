@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+
+}
+
+#head{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+}
+
+#head h1{
+    font-size: 4vw;
+    margin-top: 20px;
+    color: #0000005b;
+
+}
+
+
+.wrapper{
+    overflow: hidden;
+    width: 80vmin;
+    padding: 50px 40px;
+    background-color: rgba(255, 255, 255, 0.377);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4),
+    inset 10px 10px 50px rgba(0, 0, 0, 0.29);
+    z-index: 2;
+    
+}
+
+span{
+    display: block;
+    text-align: center;
+    font-size: 100px;
+}
+
+p{
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 35px;
+    margin: 30px 0;
+    opacity: 0;
+    z-index: 9;
+}
+.fade{
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+button{
+    display: block;
+    background-color: yellow;
+    position: relative;
+    border: none;
+    padding: 5px;
+    font-size: 10px;
+    color: #171721;
+    font-weight: 600;
+    padding: 12px 25px;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    border-radius: 5px;
+    box-shadow: 2;
+    box-shadow: 1px 3px 6px #acacac,
+             -1px -3px 6px #ffffff;
+}
+body::before{
+    content: '';
+    width: 50%;
+    height: 50%;
+    background-color: #ff0000;
+    position: absolute;
+    border-radius: 50%;
+    top: -10%;
+    left: -10%;
+    filter: blur(60px);
+    z-index: 1;
+    animation: anime 8s infinite;
+    animation-direction: alternate;
+    opacity: 30%;
+
+}
+
+body::after{
+    content: '';
+    width: 50%;
+    height: 50%;
+    background-color: #0008ff;
+    position: absolute;
+    border-radius: 50%;
+    top: -10%;
+    right: -10%;
+    filter: blur(60px);
+    z-index: 1;
+    animation: anime2 8s infinite;
+    animation-direction:alternate;
+    opacity: 30%;
+
+}
+#gola{
+    width: 100%;
+    height: 20%;
+    background-color: #ffffff38;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    filter: blur(60px);
+    z-index: -1;
+    animation: anime3 5s  infinite ;
+    animation-direction: alternate;
+}
+@keyframes anime {
+    0%{
+        transform: translateX(0%);
+        background-color:#ff0000d5;
+    }
+    50%{
+        scale: .5;
+    }
+
+    100%{
+        transform: translate(100%,100%);
+        background-color: #0008ffd9;
+    }
+}
+@keyframes anime2 {
+    0%{
+        transform: translateY(0%);
+        background-color: #1900ffd9;  
+    }
+    50%{
+        scale: .5;
+    }
+    100%{
+        transform: translate(-100%,100%);
+        background-color:#ff0000d5;
+    }
+}
+@keyframes anime3 {
+    0%{
+        transform: rotate(0deg)skew(1);
+    }
+    100%{
+        transform: rotate(180deg);
+        background-color: rgba(255, 0, 0, 0.462);
+    }
+}
+
+
